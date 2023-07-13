@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>bloom.</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="Social media addiction asupport app">
+    <meta name="keywords" content="Mental health,mood,social medi,screen time">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet">
+    <link rel="icon" href="../images/favicon.png" type="image/png">
+    <link href="style.css" rel="stylesheet">
+    <link href="manifest.json" rel="manifest">
+  </head>
+  <body>
+  <!-- loading screen -->
+  <div class="page" id="loading-logo" hidden>bloom.</div>
+  
+  <!-- sign in options page -->
+  <div class="page" id="sign-in-prompt" hidden>
+    <h1 style="padding-top:50px;font-weight:bold">bloom.</h1>
+    <p>the alternative to social media addiction</p>
+    <hr>
+    <br>
+    <p>already have an account?</p>
+    <button style="background:lightgrey;" onclick="hide(page.prompt);show(page.signIn);">sign in ></button>
+    <br>
+    <p>– or –</p>
+    <button onclick="hide(page.prompt);show(page.createAccount);">i'm new ></button>
+    <p>if so, welcome!</p>
+  </div>
+  
+  <!-- sign in page -->
+  <div class="page" id="sign-in" hidden>
+    <div style="text-align:left;margin-left:10%;width:80%">
+      <h1 style="padding-top:50px;font-weight:bold">sign in to <br> bloom.</h1>
+      <p>the alternative to social media addiction</p>
+      <hr>
+      <br>
+      <p>username</p>
+      <input type="text" placeholder="enter your username...">
+      <br>
+      <br>
+      <p>password</p>
+      <input type="password" placeholder="enter your password...">
+      <br><br><br>
+      <button style="width:100%" onclick="hide(page.signIn);page.tab.style.visibility='visible';show(page.feed);">sign in ></button>
+    </div>
+  </div>
+  
+  <!-- create account page -->
+  <div class="page" id="create-account" hidden>
+    <div style="text-align:left;margin-left:10%;width:80%">
+      <h1 style="padding-top:50px;font-weight:bold">welcome to bloom!</h1>
+      <p>the journey to healthy social media starts here</p>
+      <hr>
+      <br>
+      <p>username</p>
+      <input type="text" placeholder="create a username...">
+      <br>
+      <br>
+      <br>
+      <p>password</p>
+      <input type="password" placeholder="create a password...">
+      <br><br>
+      <input type="password" placeholder="verify your password...">
+      <br>
+      <br>
+      <p>location</p>
+      <button style="width:100%;background:lightgrey;" onclick="displayLocationChoices(this);" id="location-selector">select location <span style="float:right">&#9660;</span></button>
+      <div id="location-selections"></div>
+      <br><br>
+      <p>i am not a robot</p>
+      <button style="width:40px;background:lightgrey;" onclick="this.style.background='tomato';">✓</button>
+      <br><br>
+      <button style="width:100%;margin-bottom:50px;" onclick="hide(page.createAccount);show(page.questionaire);">continue ></button>
+    </div>
+  </div>
+  
+  <!-- questionaire -->
+  <div class="page" id="questionaire" hidden>
+    <div style="text-align:left;margin-left:10%;width:80%">
+      <h1 style="padding-top:50px;font-weight:bold">personalize your app experience.</h1>
+      <p>answer yes or no to the following prompts, being as truthful to your own beliefs as possible. <br>this allows bloom to get to know you better</p>
+      <br>
+      <hr>
+      <p>things were better in the past than they are now</p>
+      <button style="width:40%;">yes</button>
+      <button style="width:40%;background:lightgrey;float:right;">no</button>
+      <br>
+      <hr style="background:lightgrey">
+      <p>lately i have had a lot of interest/motivation in the things i do</p>
+      <button style="width:40%;">yes</button>
+      <button style="width:40%;background:lightgrey;float:right;">no</button>
+      <br>
+      <hr style="background:lightgrey">
+      <p>i am full of energy almost every day</p>
+      <button style="width:40%;">yes</button>
+      <button style="width:40%;background:lightgrey;float:right;">no</button>
+      <br>
+      <hr style="background:lightgrey">
+      <p>i have been feeling anxious and worried about things frequently</p>
+      <button style="width:40%;">yes</button>
+      <button style="width:40%;background:lightgrey;float:right;">no</button>
+      <br>
+      <hr style="background:lightgrey">
+      <p>people can only be poor if they made bad decisions in life</p>
+      <button style="width:40%;">yes</button>
+      <button style="width:40%;background:lightgrey;float:right;">no</button>
+      <br>
+      <hr style="background:lightgrey">
+      <p>i feel angry at people a lot of the time</p>
+      <button style="width:40%;">yes</button>
+      <button style="width:40%;background:lightgrey;float:right;">no</button>
+      <br>
+      <hr style="background:lightgrey">
+      <p>everyone in the world has equal opportunities of achieving success and happiness</p>
+      <button style="width:40%;">yes</button>
+      <button style="width:40%;background:lightgrey;float:right;">no</button>
+      <br>
+      <hr style="background:lightgrey">
+      <p>i prefer country music over hip-hip or indie rock</p>
+      <button style="width:40%;">yes</button>
+      <button style="width:40%;background:lightgrey;float:right;">no</button>
+      <br>
+      <hr style="background:lightgrey">
+      <p>society's biggest threat today is communism</p>
+      <button style="width:40%;">yes</button>
+      <button style="width:40%;background:lightgrey;float:right;">no</button>
+      <br>
+      <hr style="background:lightgrey">
+      <p>i have full trust and faith in mainstream news media</p>
+      <button style="width:40%;">yes</button>
+      <button style="width:40%;background:lightgrey;float:right;">no</button>
+      <br><br><br>
+      <button style="width:100%;margin-bottom:50px;" onclick="hide(page.questionaire);page.tab.style.visibility='visible';show(page.feed);">create account ></button>
+    </div>
+  </div>
+  
+  <!-- feed page -->
+  <div class="page" id="feed" hidden> </div>
+
+  <!-- bottom tab bar -->
+  <div id="tab-div" hidden>
+    <button class="tab" style="height:50px"><span class="material-icons" style="font-size:30px">home</span></button>
+    <button class="tab" style="height:50px"><span class="material-icons" style="font-size:30px">format_quote</span></button>
+    <button class="tab" style="height:50px"><span class="material-icons" style="font-size:30px">record_voice_over</span></button>
+    <button class="tab" style="height:50px"><span class="material-icons" style="font-size:30px">person</span></button>
+  </div>
+  
+  <script src="pwa.js"></script>
+  <script src="script.js"></script>
+  </body> 
+</html>

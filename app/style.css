@@ -1,0 +1,142 @@
+* {
+  font-family: 'Poppins', sans-serif;
+  color: rgb(38, 38, 38);
+}
+body {
+  user-select: none;
+  -webkit-user-select: none;
+  overflow-x: hidden;
+  overflow-y: auto;
+  background: white;
+}
+*:focus {
+  outline: none;
+}
+input, textarea {
+  user-select: auto;
+  -webkit-user-select: auto;
+  background: transparent;
+  border: 2px solid transparent;
+  border-bottom: 2px solid black;
+  font-size: 17px;
+  color: black;
+  height: 40px;
+  width: 100%;
+}
+input:focus {
+  border: 2px solid transparent;
+  border-bottom: 2px solid tomato;
+}
+::placeholder {
+  color: grey;
+}
+button {
+  width: 60%;
+  height: 40px;
+  font-size: 18px;
+  background: tomato;
+  border: none;
+  border-radius: 2px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  transition: transform 0.3s;
+}
+button:hover {
+  transform: scale(1.1);
+}
+button:focus {
+  transform: scale(1.1);
+}
+hr {
+  border: none;
+  background: tomato;
+  height: 2px;
+}
+p {
+  font-size: 17px;
+}
+#loading-logo {
+  font-size: 90px;
+  font-weight: bold;
+  padding-top: 250px;
+  animation-name: fadeblur;
+  animation-duration: 2s;
+  z-index: 2;
+}
+@keyframes fadeblur {
+  0% {filter: blur(25px);}
+  25% {filter: blur(5px);}
+  50% {filter: blur(1px);}
+  75% {filter: blur(0.2px);}
+  100% {filter: blur(0px);}
+}
+.page {
+  width: 100%;
+  height: 100%;
+  background: white;
+  color: rgb(38, 38, 38);
+  text-align: center;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  overflow-y: auto;
+}
+#location-selections {
+  display: none;
+  height: 250px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  border-radius: 10px;
+}
+.material-icons {
+  margin-top: 5px;
+}
+.tab {
+  width: 25%;
+  border-radius: 0px;
+  background: white;
+  margin: 0px;
+  color: rgb(38, 38, 38);
+}
+.tab:hover {
+  transform: scale(1);
+}
+.tab:focus {
+  transform: scale(1);
+  background: tomato;
+  color: white;
+}
+#tab-div {
+  position: fixed;
+  bottom: 0px;
+  left: 0px;
+  height: 70px;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  background: white;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  visibility: hidden;
+  z-index: 10;
+}
+.comment {
+  background-image: linear-gradient(rgb(0, 0, 0, 0), rgb(0, 0, 0, 0.5));
+  height: 100px;
+  width: 100%;
+  overflow: hidden;
+  z-index: 1;
+  margin-top: 2px;
+}
+.img {
+  width: 90%;
+  height: calc(95% - 100px);
+  margin: 5%;
+  z-index: -2;
+  border-radius: 5px;
+}
+.link {
+  color: white;
+}
+.link:hover {
+  text-decoration: underline;
+}

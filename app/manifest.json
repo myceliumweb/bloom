@@ -1,0 +1,22 @@
+{
+	"name":"Bloom",
+	"short_name":"Bloom",
+	"start_url":"app/index.html",
+	"display":"standalone",
+	"background_color":"white",
+	"theme_color":"white",
+	"scope": ".",
+	"description":"Social media",
+	"icons":[
+	{
+	"src":"images/icon-192x192.png",					
+	"sizes":"192x192",
+	"type":"image/png"
+	},
+	{
+	"src":"images/icon-512x512.png",
+	"sizes":"512x512",
+	"type":"image/png"
+	}
+]
+}
