@@ -1,7 +1,7 @@
 {
 	"name":"Bloom",
 	"short_name":"Bloom",
-	"start_url":"app/index.html",
+	"start_url":"index.html",
 	"display":"standalone",
 	"background_color":"white",
 	"theme_color":"white",
