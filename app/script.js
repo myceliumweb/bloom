@@ -53,7 +53,6 @@ function addToFeed() {
   var g = Math.round(Math.random() * 250);
   var b = Math.round(Math.random() * 250);
   var postCreator = "<span class='link'>@bloom_tests</span> – post" + postNumber;
-  var randomWord = words[Math.round(Math.random() * words.length)];
   var randomFilter = "saturate(" + Math.round(Math.random() * 2000) + "%) invert(" + Math.round(Math.random() * 100) + "%) contrast(" + Math.round(Math.random() * 2000) + "%)";
   //dimensions
   var h = window.innerHeight - 100;
